@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 3
+   
+   Layout Style Sheet for A Soldier's Scrapbook
+   Author: Ethan Gruenemeier
+   Date: 10.25.18
+   
+   Filename: ss_layout.css
+
+*/
+
+
+/* Article Styles */
+/* this affects the article element and floats the elements to the left margin and makes the width 384 pixels */
+article {
+    float: left;
+    width: 384px;
+}
+
+/* First Line and Drop Cap Styles */
+/* This affect the first paragraph in the article and the first line of the paragrah. Sets the font size to 1.25ems and the font variant is set to small caps. */
+article>p:first-of-type::first-line {
+    font-size: 1.25em;
+    font-variant: small-caps;
+}
+
+/* This affects the first paragraph and the first letter in the article element and makes the font-size and the font family to serif. Then the content is floated to the left and the line height is set to 0.8ems and the right and the bottom margins in set to 5 pixels. */
+article>p:first-of-type::first-letter {
+    font-size: 4em;
+    font-family: serif;
+    float: left;
+    line-height: 0.8em;
+    margin: 0 5px 5px 0;
+}
+
+/* Aside Styles */
+/* This affects the aside element and makes the width 768 pixels and floats the content to the left margin. */
+aside {
+    width: 768px;
+    float: left;
+}
+
+/* Map Styles */
+/* This affects the id battlemap and makes the width of the container 688px and the top and bottom margins are set to 20 pixels and the left and right margins are set to auto.  */
+#battleMap {
+    width: 688px;
+    margin: 20px auto 20px auto;
+    position: relative;
+}
+
+/* The id of mapImage is affected and changes display to block and the width is set to 100%. */
+#mapImage {
+    display: block;
+    width: 100%;
+}
+
+/* Interactive Map Styles */
+/* This affects the class of battlemarkers and sets the position to absolute. */
+.battleMarkers {
+    position: absolute;
+}
+
+/* This affects the id of marker1 and sets the top and left coordinates in pixels. */
+#marker1 {
+    top: 220px;
+    left: 340px;
+}
+
+/* This affects the id of marker2 and sets the top and left coordinates in pixels. */
+#marker2 {
+    top: 194px;
+    left: 358px;
+}
+
+/* This affects the id of marker3 and sets the top and left coordinates in pixels. */
+#marker3 {
+    top: 202px;
+    left: 400px;
+}
+
+/* This affects the id of marker4 and sets the top and left coordinates in pixels. */
+#marker4 {
+    top: 217px;
+    left: 452px;
+}
+
+/* This affects the id of marker5 and sets the top and left coordinates in pixels. */
+#marker5 {
+    top: 229px;
+    left: 498px;
+}
+
+/* This affects the id of marker6 and sets the top and left coordinates in pixels. */
+#marker6 {
+    top: 246px;
+    left: 544px;
+}
+
+/* Map Information Styles */
+/* This affects the class of mapInfo thats asociated with divs and sets the display to none so that the content is invisible. */
+div.mapInfo {
+    display: none;
+}
+
+/* This affects the anchor tags with a class of battlemarkers and the divs with the class of mapInfo. Sets the display to block so the user can see the content when hoverinng over the marker. */
+a.battleMarkers:hover+div.mapInfo {
+    display: block;
+}
